@@ -11,6 +11,7 @@ public class InputManager : MonoBehaviour
 
     // Step 4: Publicly accessible Input Action for Move
     public InputAction moveAction;
+    public InputAction fireAction;
 
     void Awake()
     {
@@ -30,5 +31,8 @@ public class InputManager : MonoBehaviour
         // Step 5: Assign Move action from Input Action Asset
         moveAction = controls.FindAction("Move");
         moveAction.Enable();
+
+        fireAction = controls.FindAction("Fire");
+        fireAction.Enable();
     }
 }
